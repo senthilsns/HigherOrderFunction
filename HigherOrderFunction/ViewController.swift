@@ -16,6 +16,9 @@ class ViewController: UIViewController {
         
         // Sorted
         sorted_HigherOrder()
+        
+        // Map
+        map_HigherOrder()
     }
 
 
@@ -36,5 +39,22 @@ class ViewController: UIViewController {
         print(decentingNumber)
         
     }
+    
+    
+    
+    //MARK: Map
+    func map_HigherOrder () {
+        
+        let numberArray : [Int] = [3,4,5,61,2,3,78]
+        
+        // Multiply with 2
+        let outputArray = numberArray.map{ $0 * 2}
+        print(outputArray)
+        
+        // String Conversion
+        let stringArr = numberArray.map{String($0)}
+        print(stringArr)
+    }
+    
 }
 
