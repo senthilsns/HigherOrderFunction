@@ -23,7 +23,7 @@ class ViewController: UIViewController {
         // Filter
         filter_HigherOrder()
         
-        //Reduce
+        // Reduce
         reduce_HigherOrder()
     }
 
@@ -77,7 +77,7 @@ class ViewController: UIViewController {
     func reduce_HigherOrder () {
         
         let inputStringArray : [String] = ["S","E","N","T","H","I","L"]
-        
+        // Append String
         let mergeString = inputStringArray.reduce(""){(result,a)-> String in
             return result + a
         }
