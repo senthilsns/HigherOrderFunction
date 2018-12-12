@@ -19,6 +19,12 @@ class ViewController: UIViewController {
         
         // Map
         map_HigherOrder()
+        
+        // Filter
+        filter_HigherOrder()
+        
+        //Reduce
+        reduce_HigherOrder()
     }
 
 
@@ -54,6 +60,29 @@ class ViewController: UIViewController {
         // String Conversion
         let stringArr = numberArray.map{String($0)}
         print(stringArr)
+    }
+    
+    
+    //MARK: Filter
+    func filter_HigherOrder () {
+        
+        let numberArray : [Int] = [4,3,5,6,7,23,56,2,4]
+        
+        // Get below 10 numbers
+        let outputArr = numberArray.filter{ $0 < 10}
+        print(outputArr)
+    }
+    
+    //MARK: Reduce
+    func reduce_HigherOrder () {
+        
+        let inputStringArray : [String] = ["S","E","N","T","H","I","L"]
+        
+        let mergeString = inputStringArray.reduce(""){(result,a)-> String in
+            return result + a
+        }
+        
+        print(mergeString)
     }
     
 }
