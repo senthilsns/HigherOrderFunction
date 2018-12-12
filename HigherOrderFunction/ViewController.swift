@@ -13,8 +13,28 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        // Sorted
+        sorted_HigherOrder()
     }
 
 
+    //MARK: Sorted
+    func sorted_HigherOrder () {
+        
+        let numberArray : [Int] = [8,4,5,3,6,7,9]
+        
+        // Ascending Order
+        let asendingNumber = numberArray.sorted()
+        print(asendingNumber)
+        
+        // Decending Order
+        let decentingNumber = numberArray.sorted { (a, b) -> Bool in
+            
+            return a > b
+        }
+        print(decentingNumber)
+        
+    }
 }
 
